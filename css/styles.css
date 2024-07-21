@@ -98,6 +98,10 @@ button:hover {
     /* 입력 필드와 동일한 너비 */
     margin: 0 auto;
     /* 중앙 정렬 */
+    word-break: keep-all;
+    /* 단어 단위로 줄 바꿈 */
+    white-space: normal;
+    /* 일반적인 줄 바꿈 처리 */
 }
 
 /* 힌트 표시 애니메이션 */
