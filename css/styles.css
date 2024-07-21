@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* 전역 변수 정의 */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --error-color: #e74c3c;
+}
+
+/* 기본 body 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 제목 스타일 */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* 버튼 기본 스타일 */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 버튼 호버 효과 */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* 게임 영역 스타일 */
+#game-area {
+    margin-top: 20px;
+}
+
+/* 키워드 표시 영역 스타일 */
+#keyword-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 입력 영역 스타일 */
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 답변 입력 필드 스타일 */
+#answer-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px 0 0 5px;
+}
+
+/* 제출 버튼 스타일 */
+#submit-button {
+    border-radius: 0 5px 5px 0;
+}
+
+/* 힌트 표시 영역 스타일 */
+#hint-display {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    min-height: 24px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+/* 힌트 표시 애니메이션 */
+#hint-display.show {
+    opacity: 1;
+}
+
+/* 점수 표시 영역 스타일 */
+#score-display {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    #answer-input {
+        width: 60%;
+    }
+}
+
+/* 시각적 숨김 클래스 (접근성 향상용) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

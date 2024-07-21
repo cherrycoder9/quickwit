@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickWit - 키워드 학습 게임</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>QuickWit</h1>
+            <p>키워드를 보고 해당하는 개념을 입력하세요!</p>
+        </header>
+
+        <main id="game-area" style="display: none;">
+            <section>
+                <h2 id="keyword-label">키워드:</h2>
+                <div id="keyword-display" aria-labelledby="keyword-label"></div>
+            </section>
+
+            <section class="input-area">
+                <label for="answer-input" class="visually-hidden">개념 설명 입력</label>
+                <input type="text" id="answer-input" placeholder="개념을 입력하세요..." aria-describedby="submit-button">
+                <button id="submit-button">제출</button>
+            </section>
+
+            <section id="hint-display" aria-live="polite"></section>
+        </main>
+
+        <button id="start-button" aria-controls="game-area">공부 시작</button>
+
+        <section id="score-display" aria-live="polite">
+            정답: <span id="correct-count">0</span> /
+            전체: <span id="total-count">0</span>
+        </section>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
