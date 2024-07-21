@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 function setupEventListeners() {
     document.getElementById('start-button').addEventListener('click', startGame);  // 시작 버튼 클릭 시 게임 시작
     document.getElementById('submit-button').addEventListener('click', checkAnswer);  // 제출 버튼 클릭 시 답변 확인
+    document.getElementById('answer-input').addEventListener('input', () => {
+        inputStarted = true;
+        resetHintTimer();  // 입력 중에는 힌트 타이머 초기화
+    });
     document.getElementById('answer-input').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') checkAnswer();  // 엔터키 입력 시 답변 확인
-        if (!inputStarted) {
-            inputStarted = true;
-            resetHintTimer();  // 입력 중에는 힌트 타이머 초기화
-        }
     });
 }
 
@@ -88,13 +88,16 @@ function calculateSimilarity(str1, str2) {
 // 힌트 타이머 시작 함수
 function startHintTimer() {
     clearTimeout(hintTimer);  // 기존 힌트 타이머 초기화
-    hintTimer = setTimeout(showHint, 3000);  // 3초 후 힌트 표시
+    hintTimer = setTimeout(() => {
+        if (!inputStarted) {  // 입력이 시작되지 않았을 때만 힌트 표시
+            showHint();
+        }
+    }, 3000);  // 3초 후 힌트 표시
 }
 
 // 힌트 타이머 초기화 함수
 function resetHintTimer() {
     clearTimeout(hintTimer);  // 기존 힌트 타이머 초기화
-    hintTimer = setTimeout(showHint, 3000);  // 입력 중에는 힌트 타이머 초기화
 }
 
 // 힌트 표시 함수
