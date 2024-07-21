@@ -94,6 +94,10 @@ button:hover {
     min-height: 24px;
     transition: opacity 0.3s;
     opacity: 0;
+    width: 70%;
+    /* 입력 필드와 동일한 너비 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
 }
 
 /* 힌트 표시 애니메이션 */
@@ -114,6 +118,10 @@ button:hover {
     }
 
     #answer-input {
+        width: 60%;
+    }
+
+    #hint-display {
         width: 60%;
     }
 }
