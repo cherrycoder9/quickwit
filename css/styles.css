@@ -1,38 +1,5 @@
 /* styles.css */
 
-/* 전역 변수 정의 */
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --background-color: #ecf0f1;
-    --text-color: #2c3e50;
-    --error-color: #e74c3c;
-}
-
-/* 기본 body 스타일 */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* 컨테이너 스타일 */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* 제목 스타일 */
-h1 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
 /* 버튼 기본 스타일 */
 button {
     background-color: var(--primary-color);
@@ -46,7 +13,7 @@ button {
 
 /* 버튼 호버 효과 */
 button:hover {
-    background-color: #2980b9;
+    background-color: #002060;
 }
 
 /* 게임 영역 스타일 */
@@ -95,13 +62,9 @@ button:hover {
     transition: opacity 0.3s;
     opacity: 0;
     width: 70%;
-    /* 입력 필드와 동일한 너비 */
     margin: 0 auto;
-    /* 중앙 정렬 */
     word-break: keep-all;
-    /* 단어 단위로 줄 바꿈 */
     white-space: normal;
-    /* 일반적인 줄 바꿈 처리 */
 }
 
 /* 힌트 표시 애니메이션 */
